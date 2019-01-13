@@ -1,11 +1,19 @@
-# String Trigrams and Similarity
+# Trigrams and Similarities for Strings
 A trigrams and similarity refinement for Ruby string
+
+## What it does
+
+The `#trigrams` method returns an array of [trigrams](https://en.wikipedia.org/wiki/Trigram) for the string.
+
+The `#similarity` method uses the trigrams for the current string and that passed in as an argument to return a `Float` value between 0.0 and 1.0 that quantifies the similarity between strings. A case insensitive comparison can be invoked with the `case_insensitive` parameter. The default is that the comparison be case sensitive.
 
 ## How to use it
 
 A Ruby refinement is a safe option to monkey-patching, particularly where you are modifying the behaviour of “someone else's” class – a core Ruby class, a Rails class, or a gem class.
 
 [Ruby 2.4 refinements documentation](https://docs.ruby-lang.org/en/2.4.0/syntax/refinements_rdoc.html)
+
+By using the extension within a class, you can send the methods directly to any string.
 
 ## Example
 
